@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('main/', include('celebrateapp1.urls')),
-    path('register/',include('register.urls'))
+    path('register/',include('Register.urls'))
 ]
