@@ -3,7 +3,7 @@
 
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Repair shop</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -80,7 +80,12 @@
                 
                 <div class="col-lg-6 m-auto d-block">
                     
-                    <form action="#" onsubmit="return validation()" class="bg-light">
+                    <form action="" method="post"  class="bg-light">
+                         {% csrf_token %}
+                            <div class="form-group">
+                                    <lable>username:</lable>
+                                    <input type="text" class="form-control" name="username" id="username">
+                                    <span id="user" class="text-danger font-weight-bold"></span>
                         
                         <div class="form-group">
                              <lable>Email:</lable>
@@ -98,10 +103,7 @@
                             <span id="cfmpass" class="text-danger font-weight-bold"></span>
 
                         </div>
-                        <div class="form-group">
-                            <lable>Mobile</lable>
-                            <input type="text" class="form-control" name="mobile" id="mobile">
-                            <span id="mobilenum" class="text-danger font-weight-bold"></span>
+                        
   
 
                         </div>
@@ -111,12 +113,17 @@
                         </form>
                         </div>
                         </div>
-                        <script type="text/javascript">
+                        <!-- <script type="text/javascript">
                             function validation(){
+                                var Username = document.getElementById('username').value;
                                 var Email=document.getElementById('email').value;
                                 var Password=document.getElementById('password').value;
                                 var conpassword=document.getElementById('conpass').value;
                                 var Mobile=document.getElementById('mobile').value;
+                                if(Username==''){
+                                    document.getElementById('user').innerHTML="**username required";
+                                    return false;
+                                }
                                 if(Email==''){
                                     document.getElementById('emailid').innerHTML="** Email required";
                                     return false;
@@ -129,18 +136,15 @@
                                     document.getElementById('cfmpass').innerHTML="** confirm your password";
                                     return false;
                                 }
-                                if(Mobile==''){
-                                    document.getElementById('mobilenum').innerHTML="**Mobile number required";
-                                    return false;
-                                }
+                                
                             }
                             
                             
-                        </script>
+                        </script> -->
                         <br>
 
                        <div align="center">
-                            Already a member <a href="/page3">Login</a> 
+                            Already a member <a href="/login">Login</a> 
                        </div> 
         
     
