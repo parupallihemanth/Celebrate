@@ -80,28 +80,28 @@
                 
                 <div class="col-lg-6 m-auto d-block">
                     
-                    <form action="" method="post"  class="bg-light">
+                    <form action="reg" method="post" class="bg-light">
                          {% csrf_token %}
                             <div class="form-group">
                                     <lable>username:</lable>
                                     <input type="text" class="form-control" name="username" id="username">
-                                    <span id="user" class="text-danger font-weight-bold"></span>
+                                    
+                                    
                         
                         <div class="form-group">
                              <lable>Email:</lable>
                              <input type="text" class="form-control" name="email" id="email">
-                             <span id="emailid" class="text-danger font-weight-bold"></span>
+                             
                         </div>
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" class="form-control" name="password" id="password">
-                            <span id="pswd" class="text-danger font-weight-bold"></span>
+                            
                         </div>
                         <div class="form-group">
                             <label>Confirm password</label>
                             <input type="password" class="form-control" name="conpass" id="conpass">
-                            <span id="cfmpass" class="text-danger font-weight-bold"></span>
-
+                            
                         </div>
                         
   
@@ -113,38 +113,16 @@
                         </form>
                         </div>
                         </div>
-                        <!-- <script type="text/javascript">
-                            function validation(){
-                                var Username = document.getElementById('username').value;
-                                var Email=document.getElementById('email').value;
-                                var Password=document.getElementById('password').value;
-                                var conpassword=document.getElementById('conpass').value;
-                                var Mobile=document.getElementById('mobile').value;
-                                if(Username==''){
-                                    document.getElementById('user').innerHTML="**username required";
-                                    return false;
-                                }
-                                if(Email==''){
-                                    document.getElementById('emailid').innerHTML="** Email required";
-                                    return false;
-                                }
-                                if(Password==''){
-                                    document.getElementById('pswd').innerHTML="**Password required";
-                                    return false;
-                                }
-                                if(conpassword==''){
-                                    document.getElementById('cfmpass').innerHTML="** confirm your password";
-                                    return false;
-                                }
-                                
-                            }
-                            
-                            
-                        </script> -->
+                        
+                       
                         <br>
-
+                       <div>
+                           {% for message in messages%}
+                              <h3>{{message}}</h3>
+                            {% endfor %}
+                            </div> 
                        <div align="center">
-                            Already a member <a href="/login">Login</a> 
+                            Already a member <a href="login/log">Login</a> 
                        </div> 
         
     

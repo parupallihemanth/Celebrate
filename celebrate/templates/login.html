@@ -80,7 +80,7 @@
                 
             <div class="col-lg-6 m-auto d-block">
                 
-                <form action="#" onsubmit="return validation()" class="bg-light">
+                <form action="log" onsubmit="return validation()" class="bg-light">
                     
                     <div class="form-group">
                          <lable>Email:</lable>
@@ -99,29 +99,11 @@
                     </form>
                     </div>
                     </div>
-                    <script type="text/javascript">
-                        function validation(){
-                            var Email=document.getElementById('email').value;
-                            var Password=document.getElementById('password').value;
-                            
-                            if(Email==''){
-                                document.getElementById('emailid').innerHTML="** Email required";
-                                return false;
-                            }
-
-                            if(Password==''){
-                                document.getElementById('pswd').innerHTML="**Password required";
-                                return false;
-                            }
-
-                            
-                        }
-                        
-
-                        
-                    </script>
+                   
                     <br>
-
+                   <div>
+                       <h3>{{messages}}</h3>
+                   </div>
                    <div align="center">
                         Not a member <a href="/register">Sign up</a> 
                    </div>
