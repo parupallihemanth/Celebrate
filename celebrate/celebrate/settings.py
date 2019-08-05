@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'celebrateapp1',
     'Register',
+    'login',
+    
 ]
 
 MIDDLEWARE = [

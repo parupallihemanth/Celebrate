@@ -21,5 +21,6 @@ urlpatterns = [
 
     path('', include('celebrateapp1.urls')),
     path('register/',include('Register.urls')),
-    path('login/', include('login.urls'))
+    path('login/',include('login.urls')),
+    
 ]

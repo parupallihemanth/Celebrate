@@ -4,7 +4,6 @@ from django.contrib import messages
 
 # Create your views here.
 
-
 def register(request):
     
 
@@ -27,6 +26,7 @@ def register(request):
                 user = User.objects.create_user(username=username, email=email, password=password1)
                 user.save()
                 print('user created')
+                return redirect('/')
         else:
             print("password doesn't match")
         return redirect('/')

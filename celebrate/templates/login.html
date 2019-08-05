@@ -44,7 +44,7 @@
                     <div class="col">
                         <div class="header_content d-flex flex-row align-items-center justify-content-start navbar-dark bg-dark navbar-expand-sm ">
                             <div class="header_content_inner d-flex flex-row align-items-end justify-content-start ">
-                                <div class="logo"><a href="/main">Repair</a></div>
+                                <div class="logo"><a href="/">Repair</a></div>
                                 
                                 <div class="header_phone ml-auto">Call us: +1-9999</div>
     
@@ -80,17 +80,18 @@
                 
             <div class="col-lg-6 m-auto d-block">
                 
-                <form action="log" onsubmit="return validation()" class="bg-light">
+                <form action="log" method="POST" class="bg-light">
+                        {% csrf_token %}
                     
                     <div class="form-group">
-                         <lable>Email:</lable>
+                         <lable>Email</lable>
                          <input type="text" class="form-control" name="email" id="email">
-                         <span id="emailid" class="text-danger font-weight-bold"></span>
+                         
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" name="password" id="password">
-                        <span id="pswd" class="text-danger font-weight-bold"></span>
+                        
                     </div>
                     
                     <input type="reset" name="reset" value="Reset" class="btn btn-primary">
@@ -101,13 +102,15 @@
                     </div>
                    
                     <br>
-                   <div>
-                       <h3>{{messages}}</h3>
+                    <div>
+                            {% for message in messages%}
+                               <h3>{{message}}</h3>
+                             {% endfor %}
+                             </div> 
+                    <div align="center">
+                        Not a member <a href="/register/reg">Sign up</a> 
                    </div>
-                   <div align="center">
-                        Not a member <a href="/register">Sign up</a> 
-                   </div>
- 
+
 
             
     
