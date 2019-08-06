@@ -50,8 +50,14 @@
                                         <li class="active"><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About us</a></li>
                                         <li><a href="#">Services</a></li>
+
+                                        {% if user.is_authenticated%}
+                                        <li>Welcome, {{username}}</li>
+                                        <li><a href="logout/logout">Logout</a></li>
+                                        {% else %}
                                         <li><a href="register/reg">Register</a></li>
                                         <li><a href="login/log">Login</a></li>
+                                        {% endif %}
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
