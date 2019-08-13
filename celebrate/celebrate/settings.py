@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'celebrateapp1',
     'Register',
     'login',
-   
+   'booking',
     
 ]
 
