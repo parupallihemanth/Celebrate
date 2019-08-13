@@ -76,45 +76,7 @@
         <br>
         
         
-        <div class="container"><br>
-                
-            <div class="col-lg-6 m-auto d-block">
-                
-                <form action="log" method="post" class="bg-light">
-                        {% csrf_token %}
-                    
-                    <div class="form-group">
-                         <lable>Username</lable>
-                         <input type="text" class="form-control" name="username">
-                         
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="password" >
-                        
-                    </div>
-                    
-                    <input type="reset" name="reset" value="Reset" class="btn btn-primary">
-                    <input type="submit" name="submit" value="Login" class="btn btn-success">
-                    
-                    </form>
-                    </div>
-                    </div>
-                   
-                    <br>
-                    <div>
-                            {% for message in messages%}
-                               <h3>{{message}}</h3>
-                             {% endfor %}
-                             </div> 
-                    <div align="center">
-                        Not a member <a href="/register/reg">Sign up</a> 
-                   </div>
-                   
-                 
-    
-    
-   
+     
         
             
 </body>

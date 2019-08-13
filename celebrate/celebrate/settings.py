@@ -42,8 +42,14 @@ INSTALLED_APPS = [
     'celebrateapp1',
     'Register',
     'login',
+   
     
 ]
+
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
